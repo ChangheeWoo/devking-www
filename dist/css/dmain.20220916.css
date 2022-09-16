@@ -1,0 +1,133 @@
+body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,input,legend,li,ol,p,select,table,td,textarea,th,ul {
+    margin: 0;
+    padding: 0
+}
+
+body,button,input,select,table,textarea {
+    font-size: 12px;
+    line-height: 16px;
+    color: #202020;
+    font-family: -apple-system,BlinkMacSystemFont,"Malgun Gothic","맑은 고딕",helvetica,"Apple SD Gothic Neo",sans-serif
+}
+
+#container {
+    position: relative;
+    width: 1130px;
+    padding: 20px 30px;
+    margin: 0 auto;
+    letter-spacing: -.2px
+}
+
+#container:after {
+    content: "";
+    display: table;
+    table-layout: fixed;
+    clear: both
+}
+
+.column_left {
+    float: left;
+    width: 750px
+}
+
+.column_right {
+    float: right;
+    width: 350px
+}
+
+
+
+.sc_login {
+    padding: 16px 16px 12px 17px;
+    background-color: #f7f9fa;
+    border: 1px solid #dae1e6
+}
+
+.sc_login .login_msg {
+    padding-left: 3px;
+    color: grey
+}
+
+.sc_login .link_login {
+    display: block;
+    padding: 15px 0;
+    margin-top: 11px;
+    background-color: #19ce60;
+    border: 1px solid #15c654;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    font-size: 13px;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none
+}
+
+.sc_login .ico_naver {
+    display: inline-block;
+    width: 60px;
+    height: 12px;
+    background-position: -138px -330px;
+    background-repeat: no-repeat;
+    vertical-align: top;
+    margin: 2px 5px 0 0
+}
+
+.sc_login .sub_area {
+    margin: 14px 8px 0 4px
+}
+
+.sc_login .sub_area:after {
+    content: "";
+    display: table;
+    table-layout: fixed;
+    clear: both
+}
+
+.sc_login .sub_area .look_box {
+    float: left
+}
+
+.sc_login .sub_area .look_box:before {
+    display: inline-block;
+    width: 10px;
+    height: 14px;
+    background-position: -444px -98px;
+    background-repeat: no-repeat;
+    vertical-align: top;
+    content: '';
+    margin: -1px 1px 1px
+}
+
+.sc_login .sub_area .link_look {
+    color: #404040
+}
+
+.sc_login .sub_area .link_look+.link_look:before {
+    background-color: #d7dce0;
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    vertical-align: top;
+    content: '';
+    margin: 0 5px 0 2px;
+    vertical-align: 3px
+}
+
+.sc_login .sub_area .link_join {
+    float: right;
+    color: #505050
+}
+
+.sc_login .sub_area .link_join:before {
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    background-position: -444px -129px;
+    background-repeat: no-repeat;
+    vertical-align: top;
+    content: '';
+    margin: 2px 5px 0 0
+}
