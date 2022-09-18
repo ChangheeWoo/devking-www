@@ -1,34 +1,83 @@
-<html lang="en"><head>
+<html lang="kr"><head>
 	<title>DEVKING Company</title>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=1190">
-	<link rel="stylesheet" href="dist/css/dmain.20220916.css">
+	<meta name="viewport" content="width=device-width, initial-scail=1.0">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="dist/css/dmain.20220918.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7955486642945668"
      crossorigin="anonymous"></script>
 </head>
 <body>
+	<div id="navigation">
+		<button onclick="onMenu()">
+			<img src="dist/image/icon_menu_36_36.png" width="36" height="36"/>
+		</button>
+		<span class="title">데브킹 컴퍼니</span>
+	</div>
 	<div id="wrap">
-		<div id="header" role="banner"></div>
-		<div id="container" role="main">
-			<div id="DM_INT_LEFT" class="column_left" style="background-color:#eee">
-				<div style="width: 750px; height: 135px; margin: 0px auto; position: relative;">
-				</div>
+		<div id="container">
+			<div id="banner">
+				<span>서비스 / DEVKING</span>
+				<span>억소리나는 개발 NO!</span>
 			</div>
-			<div id="DM_INT_RIGHT" class="column_right" style="background-color:#aaa">
-				<div id="account" class="sc_login">
-					<p class="login_msg">네이버를 더 안전하고 편리하게 이용하세요</p>
-					<a href="#" class="link_login" data-clk="log_off.login">네이버 로그인</a>
-					<div class="sub_area">
-					<div class="look_box">
-					<a href="#" class="link_look" data-clk="log_off.searchid">아이디</a>
-					<a href="#" class="link_look" data-clk="log_off.searchpass">비밀번호찾기</a>
-					</div>
-					<a href="#" class="link_join" data-clk="log_off.registration">회원가입</a>
-					</div>
-					</div>
+			<div id="introduce">
+				<span>대표소개</span>
+			</div>
+			<div id="portfolio">
+				<span>포트폴리오</span>
+			</div>
+			<div id="registration">
+				<span>등록</span>
 			</div>
 		</div>
 	</div>
+	<div id="menu-box">
+		333
+	</div>
 </body>
+<script>
+	function getStyle(el, styleProp) {
+		var value, defaultView = (el.ownerDocument || document).defaultView;
+		// W3C standard way:
+		if (defaultView && defaultView.getComputedStyle) {
+			// sanitize property name to css notation
+			// (hypen separated words eg. font-Size)
+			styleProp = styleProp.replace(/([A-Z])/g, "-$1").toLowerCase();
+			return defaultView.getComputedStyle(el, null).getPropertyValue(styleProp);
+		} else if (el.currentStyle) { // IE
+			// sanitize property name to camelCase
+			styleProp = styleProp.replace(/\-(\w)/g, function(str, letter) {
+			return letter.toUpperCase();
+			});
+			value = el.currentStyle[styleProp];
+			// convert other units to pixels on IE
+			if (/^\d+(em|pt|%|ex)?$/i.test(value)) { 
+			return (function(value) {
+				var oldLeft = el.style.left, oldRsLeft = el.runtimeStyle.left;
+				el.runtimeStyle.left = el.currentStyle.left;
+				el.style.left = value || 0;
+				value = el.style.pixelLeft + "px";
+				el.style.left = oldLeft;
+				el.runtimeStyle.left = oldRsLeft;
+				return value;
+			})(value);
+			}
+			return value;
+		}
+	}
+
+	const onMenu = () => {
+		const left = getStyle(document.getElementById('menu-box'), 'left'); 
+		if (left === '-200px') {
+			document.getElementById('menu-box').style.left = '0';
+			document.getElementById('navigation').getElementsByTagName('button')[0].style.left = '200px';
+		} else {
+			document.getElementById('menu-box').style.left = '-200px';
+			document.getElementById('navigation').getElementsByTagName('button')[0].style.left = '0';
+		}
+			
+	}
+</script>
 </html>
