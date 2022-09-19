@@ -49,7 +49,8 @@ button {
 
 #container {
     position: relative;
-    width: 980px;
+    width: 100%;
+    max-width: 980px;
     margin: 0 auto;
     letter-spacing: -.2px
 }
@@ -79,4 +80,14 @@ button {
 #container #registration {
     height: 250px;
     background-color: #a9a9a9;
+}
+
+.section-header {
+    width: calc(100% - 40px);
+    line-height: 40px;
+    padding: 0 20px;
+    color: #ddd;
+    font-family: 'Jua', sans-serif;
+    font-size: 20px;
+    background-color: #222;
 }
