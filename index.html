@@ -11,10 +11,14 @@
 </head>
 <body>
 	<div id="navigation">
-		<button onclick="onMenu()">
+		<button onclick="onMenu()" style="display: none">
 			<img src="dist/image/icon_menu_36_36.png" width="36" height="36"/>
 		</button>
-		<span class="title">데브킹 컴퍼니</span>
+		<span class="title d-flex">
+			<img class="m-7" src="dist/image/logo.webp" width="36" height="36">
+			<span class="pt-18">데브킹 컴퍼니</span>
+			<img class="m-7" src="dist/image/logo.webp" width="36" height="36">
+		</span>
 	</div>
 	<div id="wrap">
 		<div id="container">
@@ -22,22 +26,78 @@
 				<div class="section-header">
 					<span>블라블라</span>
 				</div>
-				<span>서비스 / DEVKING</span>
-				<span>억소리나는 개발 NO!</span>
+				<div class="section-body" style="background-color: darkslateblue; padding: 20px">
+					<span>억소리나는 개발 NO! 빠르고 싸게 YES!</span>
+				</div>
 			</div>
 			<div id="introduce">
 				<div class="section-header">
-					<span>대표소개</span>
+					<span>구성원 소개</span>
+				</div>
+				<div class="section-body">
+					<div class="member-information" style="border: 5px solid #415841;">
+						<div class="member-image" style="background-color: #415841">
+							<img src="dist/image/member1.png">
+						</div>
+						<div class="member-detail">
+							<p>역할 : 대표 개발자</p>
+							<p>활동명 : Jean (진)</p>
+							<p>개발경력 : 15년 (2008.08 ~ 현재)</p>
+							<p>도메인경험 : 포털, 모빌리티, 공유오피스, OTA, 소셜</p>
+							<p>기술스택 : Backend - AWS, Nest.js, Express.js</p>
+							<p style="margin-left: 80px">Frontend - React Native, HTML, CSS, JQuery</p>
+							<p></p>
+						</div>
+					</div>
+					<div class="member-information" style="border: 5px solid #935a93;">
+						<div class="member-image" style="background-color: #935a93">
+							<img src="dist/image/member2.png">
+						</div>
+						<div class="member-detail">
+							<p>역할 : 대표 개발자</p>
+							<p>활동명 : Ronaldo (호날두)</p>
+							<p>개발경력 : 15년 (2008.08 ~ 현재)</p>
+							<p>도메인경험 : SaaS, Game, AI</p>
+							<p>기술스택 : Backend - AWS, Nest.js, Express.js</p>
+							<p style="margin-left: 80px">Frontend - React Native, Unity, iOS, Android</p>
+							<p></p>
+						</div>
+					</div>
+					<div class="member-information" style="border: 5px solid #2e4883;">
+						<div class="member-image" style="background-color: #2e4883">
+							<img src="dist/image/member3.png">
+						</div>
+						<div class="member-detail">
+							<p>역할 : 프리랜서 개발자</p>
+							<p>활동명 : Taiji (태지)</p>
+							<p>개발경력 : 3년 (2020.03 ~ 현재)</p>
+							<p>도메인경험 : 광고, 배너</p>
+							<p>기술스택 : Frontend - HTML, CSS, JQuery</p>
+							<p></p>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div id="portfolio">
+			<div id="portfolio" style="display: none">
 				<div class="section-header">
 					<span>포트폴리오</span>
 				</div>
+				<div class="section-body">
+					<span>- 게임</span>
+					<p>- 생활</p>
+					<p>- 결제</p>
+					<p>- 기타</p>
+				</div>
 			</div>
-			<div id="registration">
+			<div id="company">
 				<div class="section-header">
-					<span>등록</span>
+					<span>회사소개</span>
+				</div>
+				<div class="section-body">
+					<p>업체명: 주식회사 데브킹컴퍼니 (397-86-02809)</p>
+					<p>소재지: 경기도 용인시 기흥구 죽전로 10, 6층 601-106호 (보정동, 장은메디칼프라자)</p>
+					<p>연락처: 010-2583-1373</p>
+					<p>이메일: wch.devking@gmail.com</p>
 				</div>
 			</div>
 		</div>
