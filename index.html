@@ -24,10 +24,37 @@
 		<div id="container">
 			<div id="banner">
 				<div class="section-header">
-					<span>블라블라</span>
+					<span>개발용어 검색하기</span>
 				</div>
 				<div class="section-body" style="background-color: darkslateblue; padding: 20px">
-					<span>억소리나는 개발 NO! 빠르고 싸게 YES!</span>
+					<div class="input-box">
+						<input id="input-search" class="input-text" name="keyword" onkeyup="onKeyUp()"/>
+					</div>
+					<button id="btn-search" class="btn" onclick="clickSearch()">검색</button>
+					<div class="search-result d-hidden">
+						<div id="result-box" class="result-box"></div>
+					</div>
+					<script src="json/develop.json" type="text/javascript"></script>
+					<script>
+						let doc = JSON.parse(JSON.stringify(Develop));
+						function clickSearch() {
+							doc = JSON.parse(JSON.stringify(Develop));
+							const word = document.getElementById('input-search').value;
+							document.getElementsByClassName('search-result')[0].classList.remove('d-hidden');
+
+							if (doc[word])
+								document.getElementById('result-box').innerHTML = doc[word];
+							else
+								document.getElementById('result-box').innerHTML = "검색결과가 없습니다.";
+
+							console.log(doc[word]);
+						}
+						function onKeyUp() {
+							if (window.event.keyCode == 13) clickSearch();
+							if (document.getElementById('input-search').value == '')
+								document.getElementsByClassName('search-result')[0].classList.add('d-hidden');
+						}
+					</script>
 				</div>
 			</div>
 			<div id="introduce">
@@ -95,7 +122,7 @@
 				</div>
 				<div class="section-body">
 					<p>업체명: 주식회사 데브킹컴퍼니 (397-86-02809)</p>
-					<p>소재지: 경기도 용인시 기흥구 죽전로 10, 6층 601-106호 (보정동, 장은메디칼프라자)</p>
+					<p>소재지: 16897, 경기도 용인시 기흥구 죽전로 10, 6층 601-106호 (보정동, 장은메디칼프라자)</p>
 					<p>연락처: 010-2583-1373</p>
 					<p>이메일: kr.devking@gmail.com</p>
 				</div>

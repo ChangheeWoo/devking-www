@@ -103,6 +103,43 @@ button {
     background-color: #424242;
 }
 
+.section-body .input-box {
+    width: 300px;
+    padding: 0 10px;
+    display: inline-block;
+    background-color: white;
+}
+
+.section-body .input-text {
+    font-family: sans-serif;
+    font-size: 15px;
+    width: 300px;
+    line-height: 25px;
+    border: 0;
+    outline: 0;
+}
+
+.section-body .btn {
+    font-family: 'Jua', sans-serif;
+    font-size: 18px;
+    width: 50px;
+    height: 30px;
+    color: white;
+    background-color: #415841;
+}
+
+.search-result {
+    width: 100%;
+    /* height: 100px; */
+    margin-top: 20px;
+    background-color: #424242;
+}
+
+.search-result .result-box {
+    padding: 10px;
+    height: auto;
+}
+
 .member-information {
     display: flex;
 }
@@ -144,4 +181,8 @@ button {
 }
 .m-7 {
     margin: 7px;
+}
+
+.d-hidden {
+    display: none;
 }
