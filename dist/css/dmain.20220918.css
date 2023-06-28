@@ -104,7 +104,7 @@ button {
 }
 
 .section-body .input-box {
-    width: 300px;
+    width: calc(100% - 80px);
     padding: 0 10px;
     display: inline-block;
     background-color: white;
@@ -113,7 +113,7 @@ button {
 .section-body .input-text {
     font-family: sans-serif;
     font-size: 15px;
-    width: 300px;
+    width: 100%;
     line-height: 25px;
     border: 0;
     outline: 0;

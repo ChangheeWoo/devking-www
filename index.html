@@ -41,8 +41,8 @@
 							const word = document.getElementById('input-search').value;
 							document.getElementsByClassName('search-result')[0].classList.remove('d-hidden');
 
-							if (doc[word])
-								document.getElementById('result-box').innerHTML = doc[word];
+							if (doc[word.toUpperCase()])
+								document.getElementById('result-box').innerHTML = doc[word.toUpperCase()];
 							else
 								document.getElementById('result-box').innerHTML = "검색결과가 없습니다.";
 
