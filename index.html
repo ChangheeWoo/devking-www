@@ -6,8 +6,8 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="dist/css/dmain.20220918.css">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7955486642945668"
-     crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7955486642945668" crossorigin="anonymous"></script>
+	<script src="dist/js/script.20240123.js" type="text/javascript"></script>
 </head>
 <body>
 	<div id="navigation">
@@ -30,26 +30,30 @@
 					<div class="input-box">
 						<input id="input-search" class="input-text" name="keyword" onkeyup="onKeyUp()"/>
 					</div>
-					<button id="btn-search" class="btn" onclick="clickSearch()">검색</button>
+					<button id="btn-search" class="btn" onclick="onSearch()">검색</button>
 					<div class="search-result d-hidden">
 						<div id="result-box" class="result-box"></div>
 					</div>
 					<script src="json/develop.json" type="text/javascript"></script>
 					<script>
+						window.onload = function() {
+							const params = getUrlParams();
+							if (!!params['sword']) {
+								document.getElementById('input-search').value = params['sword'];
+								clickSearch();
+							}
+						}
 						let doc = JSON.parse(JSON.stringify(Develop));
 						function clickSearch() {
 							const word = document.getElementById('input-search').value;
-							document.getElementsByClassName('search-result')[0].classList.remove('d-hidden');
-
-							if (doc[word.toUpperCase()])
-								document.getElementById('result-box').innerHTML = doc[word.toUpperCase()];
-							else
-								document.getElementById('result-box').innerHTML = "검색결과가 없습니다.";
-
-							console.log(doc[word]);
+							document.getElementsByClassName('search-result')[0].classList.remove('d-hidden');							
+							document.getElementById('result-box').innerHTML = doc[word.toUpperCase()] || "검색결과가 없습니다.";
+						}
+						function onSearch() {
+							location.href = '?sword=' + document.getElementById('input-search').value;
 						}
 						function onKeyUp() {
-							if (window.event.keyCode == 13) clickSearch();
+							if (window.event.keyCode == 13) onSearch();
 							if (document.getElementById('input-search').value == '')
 								document.getElementsByClassName('search-result')[0].classList.add('d-hidden');
 						}
@@ -68,9 +72,9 @@
 						<div class="member-detail">
 							<p>역할 : 대표 개발자</p>
 							<p>활동명 : King (킹)</p>
-							<p>개발경력 : 15년 (2008.08 ~ 현재)</p>
+							<p>개발경력 : 16년 (2008.08 ~ 현재)</p>
 							<p>도메인경험 : 포털, 모빌리티, 공유오피스, OTA, 소셜</p>
-							<p>기술스택 : Backend - AWS, Nest.js, Express.js</p>
+							<p>기술스택 : Backend - AWS, Nest.js, Express.js, PHP</p>
 							<p style="margin-left: 80px">Frontend - React Native, HTML, CSS, JQuery</p>
 							<p></p>
 						</div>
@@ -82,9 +86,9 @@
 						<div class="member-detail">
 							<p>역할 : 대표 개발자</p>
 							<p>활동명 : Jjin (찐)</p>
-							<p>개발경력 : 15년 (2008.08 ~ 현재)</p>
+							<p>개발경력 : 16년 (2008.08 ~ 현재)</p>
 							<p>도메인경험 : SaaS, Game, AI</p>
-							<p>기술스택 : Backend - AWS, Nest.js, Express.js</p>
+							<p>기술스택 : Backend - AWS, Nest.js, Express.js, PHP</p>
 							<p style="margin-left: 80px">Frontend - React Native, Unity, iOS, Android</p>
 							<p></p>
 						</div>
@@ -96,20 +100,46 @@
 						<div class="member-detail">
 							<p>역할 : 프리랜서 PM</p>
 							<p>활동명 : Car (카)</p>
-							<p>경력 : 20년 (2003.03 ~ 현재)</p>
+							<p>경력 : 21년 (2003.03 ~ 현재)</p>
 							<p>도메인경험 : OTA, 계정, 쿠폰, 결제</p>
 							<p>특이사항 : 디자인 전공, 포토샵, Figma, 간단한 웹 개발 가능</p>
 							<p></p>
 						</div>
 					</div>
+					<div class="member-information" style="border: 5px solid #749439;">
+						<div class="member-image" style="background-color: #749439">
+							<img src="dist/image/member4.png">
+						</div>
+						<div class="member-detail">
+							<p>역할 : 시니어 개발자</p>
+							<p>활동명 : Gold (골드)</p>
+							<p>개발경력 : 10년 (2013.03 ~ 현재)</p>
+							<p>도메인경험 : 웹사이트, 스크립트</p>
+							<p>기술스택 : Frontend - HTML, CSS, JQuery</p>
+							<p></p>
+						</div>
+					</div>
+					<div class="member-information" style="border: 5px solid #dfd7a0;">
+						<div class="member-image" style="background-color: #dfd7a0">
+							<img src="dist/image/member5.png">
+						</div>
+						<div class="member-detail">
+							<p>역할 : 시니어 개발자</p>
+							<p>활동명 : Ken (켄)</p>
+							<p>개발경력 : 14년 (2010.03 ~ 현재)</p>
+							<p>도메인경험 : 헬스케어, 의료기기, 키오스크, 영상처리, 머신러닝</p>
+							<p>기술스택 : Backend - ML, Data, SQL, Python</p>
+							<p></p>
+						</div>
+					</div>
 					<div class="member-information" style="border: 5px solid #2e4883;">
 						<div class="member-image" style="background-color: #2e4883">
-							<img src="dist/image/member4.png">
+							<img src="dist/image/member6.png">
 						</div>
 						<div class="member-detail">
 							<p>역할 : 프리랜서 개발자</p>
 							<p>활동명 : Taesan (태산)</p>
-							<p>개발경력 : 4년 (2020.03 ~ 현재)</p>
+							<p>개발경력 : 5년 (2020.03 ~ 현재)</p>
 							<p>도메인경험 : 광고, 배너</p>
 							<p>기술스택 : Frontend - HTML, CSS, JQuery</p>
 							<p></p>
