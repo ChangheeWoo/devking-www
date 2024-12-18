@@ -1,5 +1,6 @@
 Develop = {
     "UIUX" : `UI/UX는 사용자 인터페이스(User Interface)와 사용자 경험(User Experience)의 약자`,
     "API" : `API는 Application Programming Interface(응용 프로그램 프로그래밍 인터페이스)의 약자`,
-    "HTML" : `웹사이트의 모습을 기술하기 위한 마크업 언어`
+    "HTML" : `웹사이트의 모습을 기술하기 위한 마크업 언어`,
+    "CSS" : `웹사이트를 꾸미는 디자인 요소를 정의한 문서`
 }
